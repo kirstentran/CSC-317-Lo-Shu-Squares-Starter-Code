@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Program_4_Idea_Lo_Shu_Squares.Pages.MainMenuPage"
+             Title="Main Menu"
+             >
+
+    
+    <Grid BackgroundColor="#f0fbff">
+        <Image Source="background.jpg" VerticalOptions="FillAndExpand" HorizontalOptions="End" />
+        <Grid RowDefinitions="80, 180, 60" ColumnDefinitions="*" 
+              VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"
+              MinimumWidthRequest="300" MaximumWidthRequest="400"
+              RowSpacing="10">
+            <Label Text="MAUI Squares" Grid.Row="0" Grid.ColumnSpan="3"
+                   HorizontalOptions="FillAndExpand"
+                   VerticalTextAlignment="Center" HorizontalTextAlignment="Center"
+                    FontSize="35" FontFamily="Comic Sans MS" FontAttributes="Bold" />
+           
+          
+            <VerticalStackLayout Grid.Row="1" MinimumWidthRequest="200" MaximumWidthRequest="300">
+                <Label Text="Select Difficulty" BackgroundColor="#AAAAFF"
+                   VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" 
+                   HorizontalTextAlignment="Center" FontSize="20" FontAttributes="Bold" />
+                
+                <HorizontalStackLayout BackgroundColor="#44B">
+                    <RadioButton x:Name="rdoEasy" GroupName="Difficulty" Grid.Row="2" Grid.Column="0" 
+                         HorizontalOptions="Start" VerticalOptions="Center" 
+                         CheckedChanged="EnableStartGame"/>
+
+                    <Label Text="Easy" Grid.Row="2" Grid.Column="0" HorizontalTextAlignment="Center" 
+                   VerticalTextAlignment="Center"  TextColor="#AAF" 
+                   FontSize="25" FontAttributes="Bold"/>
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout BackgroundColor="#4B4">
+                    <RadioButton x:Name="rdoNormal" GroupName="Difficulty" Grid.Row="2" Grid.Column="1" 
+                         HorizontalOptions="Start" VerticalOptions="Center" 
+                         CheckedChanged="EnableStartGame"/>
+                    
+                    <Label Text="Normal" Grid.Row="2" Grid.Column="1" HorizontalTextAlignment="Center" 
+                   VerticalTextAlignment="Center"   TextColor="#AFA" 
+                   FontSize="25" FontAttributes="Bold"/>
+                    
+                </HorizontalStackLayout>
+
+                <HorizontalStackLayout BackgroundColor="#B44">
+                    <RadioButton x:Name="rdoHard" GroupName="Difficulty" Grid.Row="2" Grid.Column="2" 
+                         HorizontalOptions="FillAndExpand" VerticalOptions="Center" 
+                         CheckedChanged="EnableStartGame"/>
+                    <Label Text="Hard" Grid.Row="2" Grid.Column="2" HorizontalTextAlignment="Center" 
+                   VerticalTextAlignment="Center"   TextColor="#FAA" 
+                   FontSize="25" FontAttributes="Bold"/>
+                </HorizontalStackLayout>
+            </VerticalStackLayout>
+            
+            
+            <VerticalStackLayout Grid.Row="3" Grid.ColumnSpan="3" WidthRequest="200">
+                <Button Text="Start Game" Grid.Column="0" BackgroundColor="#696" 
+                        Clicked="StartGame" x:Name="btnStartGame" IsEnabled="False"/>
+                <Button Text="Leaderboards" Grid.Column="1" Clicked="ShowLeaderboards"/>
+                <Button Text="Instructions" Grid.Column="2" Clicked="ShowInstructions"/>
+                <Button Text="Exit Game" Grid.Column="3" Clicked="ExitGame"/>
+            </VerticalStackLayout>
+        </Grid>
+    </Grid>
+</ContentPage>

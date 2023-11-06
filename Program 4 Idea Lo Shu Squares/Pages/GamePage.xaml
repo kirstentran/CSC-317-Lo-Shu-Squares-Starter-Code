@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Program_4_Idea_Lo_Shu_Squares.Pages.GamePage"
+             Title="GamePage">
+    <!-- Note that there is a "wrapper" grid that houses the background picture. -->
+    <Grid>
+        <Image Source="background.jpg" VerticalOptions="FillAndExpand" HorizontalOptions="End" />
+        
+        <Grid
+            RowDefinitions="40, 10, 80, 80, 80, 10, *"
+            ColumnDefinitions="10, 80, 80, 80, *, 10"
+            MinimumWidthRequest="300"
+            MaximumWidthRequest="400"
+        >
+            <!-- Row 1: Title  -->
+            <!-- Row 2: Padder Row (nothing here)  -->
+            <!-- Row 3 - 5: Lo Shu Squares Options Buttons  -->
+            <!-- Row 6: Padder Row (nothing here)  -->
+            <!-- Row 7: Scoring and Difficulty Row  -->
+
+            <!-- Column 1: Padder Row (nothing here)  -->
+            <!-- Column 2 - 4: Lo Shu Square  -->
+            <!-- Column 3: Options Buttons  -->
+            <!-- Column 4: Padder Row (nothing here)  -->
+            
+            <!-- Your code should go inside this grid.... -->
+
+        </Grid>
+
+    </Grid>
+
+</ContentPage>
