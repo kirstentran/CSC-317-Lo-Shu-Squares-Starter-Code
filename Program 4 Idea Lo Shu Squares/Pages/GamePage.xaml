@@ -1,4 +1,15 @@
 <?xml version="1.0" encoding="utf-8" ?>
+<!--
+
+Program Author: Uyen Tran
+
+Assignment: CSC317 Lo Shu Squares
+
+Description:
+
+This page provides the front end implementation of the GAME PLAY PAGE in the app
+
+-->
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Program_4_Idea_Lo_Shu_Squares.Pages.GamePage"
@@ -14,17 +25,44 @@
             MaximumWidthRequest="400"
         >
             <!-- Row 1: Title  -->
-            <!-- Row 2: Padder Row (nothing here)  -->
-            <!-- Row 3 - 5: Lo Shu Squares Options Buttons  -->
-            <!-- Row 6: Padder Row (nothing here)  -->
-            <!-- Row 7: Scoring and Difficulty Row  -->
+            <Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="6" HorizontalTextAlignment="Center" Text=" Time Left: 296 seconds" BackgroundColor="#444488" TextColor="white"  FontSize="20"></Label>
 
-            <!-- Column 1: Padder Row (nothing here)  -->
+            <!-- Row 3 - 5: Lo Shu Squares Options Buttons  -->
             <!-- Column 2 - 4: Lo Shu Square  -->
+            <Label Grid.Row="2" Grid.Column="1" TextColor="white" Text="2" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold" FontSize="Large" Margin="5,5,5,5" BackgroundColor="#444488" ></Label>
+            <Label Grid.Row="2" Grid.Column="2" TextColor="white" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold" FontSize="Large"  Margin="5,5,5,5" BackgroundColor="#6666AA" ></Label>
+            <Label Grid.Row="2" Grid.Column="3" TextColor="white" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold" FontSize="Large"   Margin="5,5,5,5" BackgroundColor="#6666AA" ></Label>
+            <Label Grid.Row="3" Grid.Column="1" TextColor="white" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold" FontSize="Large"  Margin="5,5,5,5" BackgroundColor="#6666AA" ></Label>
+            <Label Grid.Row="3" Grid.Column="2" TextColor="white" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold" FontSize="Large"  Margin="5,5,5,5" BackgroundColor="#6666AA" ></Label>
+
+            <Label Grid.Row="3" Grid.Column="3" TextColor="white" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold" FontSize="Large"  Margin="5,5,5,5" BackgroundColor="#6666AA" ></Label>
+            <Label Grid.Row="4" Grid.Column="3" TextColor="white" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold" FontSize="Large"  Margin="5,5,5,5" BackgroundColor="#6666AA" ></Label>
+
+            <Label Grid.Row="4" Grid.Column="1" TextColor="white" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold" FontSize="Large"   Margin="5,5,5,5" BackgroundColor="#6666AA" ></Label>
+            <Label Grid.Row="4" Grid.Column="2" TextColor="white" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontAttributes="Bold" FontSize="Large"   Margin="5,5,5,5" BackgroundColor="#6666AA" ></Label>
             <!-- Column 3: Options Buttons  -->
-            <!-- Column 4: Padder Row (nothing here)  -->
-            
-            <!-- Your code should go inside this grid.... -->
+            <Button Text="Get Hint(2 left)" Background="#448866" Grid.Row="2" Grid.Column="4" Margin="10,-30,0,0" HeightRequest="30" TextColor="white"></Button>
+            <Button Text="New Game" Background="#448866" Grid.Row="3" Grid.Column="4" Margin="10,-100,0,0" HeightRequest="30" TextColor="white"></Button>
+           
+            <Button Text="Main Menu" Background="#448866" Grid.Row="4" Grid.Column="4" Margin="10,-170,0,0" HeightRequest="30" TextColor="white"></Button>
+            <!-- Row 7: Scoring and Difficulty Row  -->
+            <VerticalStackLayout Grid.ColumnSpan="4" Grid.Row="6" Grid.Column="0" >
+                <Label  BackgroundColor="#AAAACC" TextColor ="Black" Padding="50,0,0,0"  Text="Hints Bonus"></Label>
+                <Label BackgroundColor="#AAAACC" TextColor ="Black"  Padding="50,0,0,0" Text="Time Bonus"></Label>
+                <Label BackgroundColor="#AAAACC" TextColor ="Black"  Padding="50,0,0,0" Text="Difficulty Bonus"></Label>
+                <Label BackgroundColor="#777799" FontAttributes="Bold" Padding="50,0,0,0" TextColor ="White" FontSize="Medium"  Text="Score "></Label>
+                
+
+
+            </VerticalStackLayout>
+            <VerticalStackLayout Grid.ColumnSpan="2" Grid.Row="6" Grid.Column="4"  >
+                <Label  BackgroundColor="#AAAACC" TextColor ="Black" HorizontalTextAlignment="Center"  Text="x2"></Label>
+                <Label BackgroundColor="#AAAACC" TextColor ="Black" HorizontalTextAlignment="Center" Text="x2"></Label>
+                <Label BackgroundColor="#AAAACC" TextColor ="Black" HorizontalTextAlignment="Center" Text="x2"></Label>
+                <Label BackgroundColor="#777799" FontAttributes="Bold" TextColor ="White" FontSize="Medium"  HorizontalTextAlignment="Center" Text="59202"></Label>
+            </VerticalStackLayout>
+          
+           
 
         </Grid>
 
